@@ -1,6 +1,6 @@
 KB5037765 fails on Windows Server 2019 without en-US language pack.
 
-Microsoft has not yet put a statement on this online. It is not listed as known issue on their KB article which can be found [here](https://support.microsoft.com/en-us/topic/may-14-2024-kb5037765-os-build-17763-5820-82d1aefb-093c-4e4a-a729-cd4a829750ad)
+KB article can be found [here](https://support.microsoft.com/en-us/topic/may-14-2024-kb5037765-os-build-17763-5820-82d1aefb-093c-4e4a-a729-cd4a829750ad)
 
 This script installs the language pack and the update from a network share. 
 * Download the files from
