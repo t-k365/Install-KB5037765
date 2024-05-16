@@ -67,7 +67,6 @@ New-LogMessage "Script startet at $timestamp"
 
 if (-not $SharePath) {
     Stop-Install "SharePath parameter is mandatory. Please specify the network share path where the update file and language pack are located."
-    exit 1
 }
 
 $updateFullPath = Join-Path $SharePath $updateFilename
