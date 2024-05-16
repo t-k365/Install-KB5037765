@@ -1,9 +1,15 @@
-KB5037765 fails on Windows Server 2019 without en-US language pack.
+## KB5037765 fails on Windows Server 2019 without en-US language pack.
 
-KB article can be found [here](https://support.microsoft.com/en-us/topic/may-14-2024-kb5037765-os-build-17763-5820-82d1aefb-093c-4e4a-a729-cd4a829750ad)
+KB article can be found [here](https://learn.microsoft.com/en-us/windows/release-health/status-windows-10-1809-and-windows-server-2019#3299msgdesc)
 
-This script installs the language pack and the update from a network share. 
-* Download the files from
+## This script does the following:
+
+* Install the en_US language pack from the specified network share if not already installed
+* Install the Update KB5037765 from the specified network share
+* Reboots, unless `-NoReboot` is specified
+
+## How-To
+* First, download the files from
 
   https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/secu/2024/05/windows10.0-kb5037765-x64_3ca0b737e301d4e398a38f1d67966f1c82507fa8.msu
 
@@ -14,7 +20,7 @@ This script installs the language pack and the update from a network share.
 * Run the script on your servers. Specify share path with `-SharePath \\your-server\share` and add `-NoReboot` if you don't want the server to automatically reboot.
 * Check the log at `C:\KB5037765-<timestamp>.txt`
 
-Example log output
+## Example log output
 
 ```
 2024-05-16 07:09:56 - Script startet at 20240516T070956
