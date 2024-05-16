@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Installs update KB5037765 and en-US language pack if needed, reboots if successful.
+    Installs pre-downloaded update KB5037765 and en-US language pack if needed, reboots if successful.
 
 .DESCRIPTION
     This script checks if the en-US language pack is installed on the system. If not, it attempts to install it from a specified share location.
@@ -21,6 +21,9 @@
     .\Install-Update.ps1 -SharePath "\\server\share" -NoReboot
     Runs the script with the specified share path and the `-NoReboot` parameter, skipping automatic reboot.
 
+.LINK
+    https://github.com/t-klemenc/Install-KB5037765
+
 .NOTES
     Author: Thomas Klemenc | License: MIT
 #>
@@ -30,6 +33,7 @@ param(
     [switch]$NoReboot    # Specify this switch to skip automatic reboot after update installation
 )
 
+# These files need to be present in share folder:
 $updateFilename = "windows10.0-kb5037765-x64_3ca0b737e301d4e398a38f1d67966f1c82507fa8.msu"
 $languagePackFilename = "Microsoft-Windows-Server-Language-Pack_x64_en-us.cab"
 
