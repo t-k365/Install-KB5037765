@@ -17,7 +17,7 @@ KB article can be found [here](https://learn.microsoft.com/en-us/windows/release
 
 * Place the .msu file in your network share
 * Mount/Extract the ISO and copy the file Microsoft-Windows-Server-Language-Pack_x64_en-us.cab to your share
-* Run the script on your servers. Specify share path with `-SharePath \\your-server\share` and add `-NoReboot` if you don't want the server to automatically reboot.
+* Run the script on your servers, manually or using scheduled tasks/GPO/etc. Specify share path with `-SharePath \\your-server\share` and add `-NoReboot` if you don't want the server to automatically reboot.
 * Check the log at `C:\KB5037765-<timestamp>.txt`
 
 ## Example log output
