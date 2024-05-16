@@ -80,9 +80,7 @@ if (-Not ($languagePacks.Contains("en-US"))) {
     New-LogMessage "Searching for language pack"
 
     If (-Not (Test-Path $languagePackFullPath)) {
-        New-LogMessage "Language pack could not be found in $SharePath. Aborting."
-        Stop-Transcript
-        exit
+        Stop-Install "Language pack could not be found in $SharePath. Aborting."
     }
 
     New-LogMessage "Language pack found at $languagePackFullPath"
